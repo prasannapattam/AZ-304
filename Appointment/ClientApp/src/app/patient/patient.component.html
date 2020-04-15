@@ -1,0 +1,35 @@
+<h2>Patient</h2>
+
+<button-control text="Add" icon="add" color="primary" class="add-button" (click)="onAdd()"></button-control>
+<button-control text="Initialize" icon="playlist_add" color="primary" class="add-button" (click)="onDataInitialize()"></button-control>
+
+<table mat-table [dataSource]="patients" class="mat-elevation-z8 full-width">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="phone">
+    <th mat-header-cell *matHeaderCellDef> Phone </th>
+    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="edit">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element" class="table-button">
+      <button-control text="Edit" icon="edit" (click)="onEdit(element)"></button-control>
+    </td>
+  </ng-container>
+  <ng-container matColumnDef="delete">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element" class="table-button">
+      <button-control text="Delete" icon="delete" color="warn" (click)="onDelete(element)"></button-control>
+    </td>
+  </ng-container>
+  
+  <tr mat-header-row *matHeaderRowDef="['name', 'phone', 'edit', 'delete']"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['name', 'phone', 'edit', 'delete'];"></tr>
+</table>
+
+

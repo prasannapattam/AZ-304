@@ -1,0 +1,11 @@
+:host { width:100% }
+
+h2 { text-align: center;}
+
+.add-button {
+    float: right;
+}
+
+.table-button {
+    width: 50px;
+}

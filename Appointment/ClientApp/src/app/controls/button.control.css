@@ -1,0 +1,15 @@
+.button-control {
+    margin: 5px;
+}
+
+.material-icons-outlined {
+    height: 24px;
+    width: auto;
+    padding-right: 5px;
+    /* color: #888; */
+}
+
+.mat-raised-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(black, 0.35);
+}
